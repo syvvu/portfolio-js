@@ -24,6 +24,7 @@
 }
 
 #theme-toggler {
+  display: none;
   background: var(--color-text-dark);
   border: none;
   border-radius: 30px;
