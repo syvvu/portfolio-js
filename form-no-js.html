@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Form</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    #contactForm {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 300px;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    .output {
+      min-height: 20px;
+      color: red;
+    }
+
+    .info-output {
+      color: blue;
+    }
+
+    input:invalid,
+    textarea:invalid {
+      border-color: red;
+    }
+
+    input:valid,
+    textarea:valid {
+      border-color: green;
+    }
+
+    label::after {
+      content: " *";
+      color: red;
+    }
+
+    input:valid + label::after,
+    textarea:valid + label::after {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <form id="contactForm" action="https://httpbin.org/post" method="post">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required />
+    <output class="output"></output>
+    <output class="info-output"></output>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required pattern=".+@.+" />
+    <output class="output"></output>
+    <output class="info-output"></output>
+
+    <label for="comments">Comments:</label>
+    <textarea
+      id="comments"
+      name="comments"
+      rows="4"
+      required
+      minlength="10"
+      maxlength="200"
+      pattern="[A-Za-z0-9 .,!?-]*"
+    ></textarea>
+    <output class="output"></output>
+    <output class="info-output"></output>
+
+    <input type="hidden" name="possible_bot" value="true" />
+    <input type="submit" value="Submit" />
+  </form>
+</body>
+</html>

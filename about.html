@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <script src="theme.js"></script>
+    <noscript>
+      <div class="noscript-message">
+        JavaScript is disabled. The site will be displayed in the default light
+        theme.
+      </div>
+    </noscript>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amaranth:wght@700&family=Work+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+  </head>
+  <body class="fade-in">
+    <div id="theme-wrapper">
+      <div class="theme-toggler-container">
+        <button id="theme-toggler">
+          <img id="theme-icon" src="./assets/palette.png" alt="Theme toggler" />
+        </button>
+      </div>
+      <nav>
+        <a href="./home.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./ideas.html">Ideas</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+      <h1>I'm Sandy.</h1>
+      <p class="main-p">
+        I'm a fourth-year Computer Science student at UC San Diego, and I'm on
+        my way to becoming a skilled software engineer.
+      </p>
+      <section class="content">
+        <picture>
+          <source
+            media="(max-width: 768px)"
+            srcset="./assets/profile-small.jpeg"
+          />
+          <source
+            media="(min-width: 1025px)"
+            srcset="./assets/profile-large.jpeg"
+          />
+          <img src="./assets/profile-medium.jpeg" alt="Profile Picture" />
+        </picture>
+
+        <section class="caption">
+          <p>
+            I started at UC San Diego without a specific major because I wasn't
+            sure what I wanted to do in life. Then, I took my first college
+            course, CSE11: Introduction to Programming and Computational
+            Problem-Solving. It was a game-changer. I discovered my passion for
+            writing code that solves a problem. That's why I chose to major in
+            CS – I simply love what I do, and I aim to make a difference to the
+            world.
+          </p>
+        </section>
+      </section>
+    </div>
+  </body>
+</html>
