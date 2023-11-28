@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const themeIcon = document.getElementById("theme-icon");
   let currentTheme = localStorage.getItem("theme") || "light";
 
+  themeToggler.style.display = "block";
+
   function updateIcon() {
     if (currentTheme === "light") {
       themeIcon.src = "./assets/palette.png";
